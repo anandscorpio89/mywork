@@ -1,0 +1,21 @@
+   <script type="text/javascript">
+var imageList = Array();
+for (var i = 1; i <= 7; i++) {
+    imageList[i] = new Image(500, 400);
+    imageList[i].src = "http://devops/CleaningBee/assets/images/" + i + ".jpg";
+}
+
+function switchImage() {
+    var selectedImage = document.myForm.switch.options[document.myForm.switch.selectedIndex].value;
+    document.getElementById("form1-1b").style.backgroundImage = "url("+imageList[selectedImage].src+")";
+}
+</script>
+
+<!-- Script to be placed inside body<> -->
+
+
+<section class="mbr-section mbr-parallax-background" id="form1-1b" style="background-image: url(assets/images/mbr-1-2000x1334.jpg); padding-top: 120px; padding-bottom: 120px;">
+
+
+<select class="form-control" name="switch" data-form-field="Apt" id="form1-1b-apt" onchange="switchImage()">
+
